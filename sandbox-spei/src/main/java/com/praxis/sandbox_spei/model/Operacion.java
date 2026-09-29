@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -17,7 +18,7 @@ public class Operacion {
             .substring(0, 26).toUpperCase();
 
     @Column(nullable = false, unique = true, length = 30)
-    private String referenciaDeSegimiento; // V11-V12
+    private String referenciaSeguimiento; // V11-V12
 
     @Enumerated(EnumType.STRING)
     private TipoOperacion tipoOperacion; // V13
@@ -71,12 +72,12 @@ public class Operacion {
         this.id = id;
     }
 
-    public String getReferenciaDeSegimiento() {
-        return referenciaDeSegimiento;
+    public String getReferenciaSeguimiento() {
+        return referenciaSeguimiento;
     }
 
-    public void setReferenciaDeSegimiento(String referenciaDeSegimiento) {
-        this.referenciaDeSegimiento = referenciaDeSegimiento;
+    public void setReferenciaSeguimiento(String referenciaSeguimiento) {
+        this.referenciaSeguimiento = referenciaSeguimiento;
     }
 
     public TipoOperacion getTipoOperacion() {
